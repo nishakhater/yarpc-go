@@ -131,6 +131,7 @@ func do() error {
 		signal.Notify(signals, syscall.SIGINT, syscall.SIGTERM)
 		<-signals
 	}
+    select {}
 	return nil
 }
 
